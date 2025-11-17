@@ -23,6 +23,7 @@ zinit snippet OMZP::command-not-found
 zinit snippet OMZP::brew
 zinit snippet OMZP::rust
 zinit snippet OMZP::kubectl
+zinit snippet OMZP::gh
 
 # Load completions
 autoload -Uz compinit && compinit
