@@ -57,7 +57,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # Aliases
 
 alias ls='eza -la'
-alias f='fzf'
+alias f='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 
 # Shell integrations
 source <(fzf --zsh)
