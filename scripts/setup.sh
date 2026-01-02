@@ -16,6 +16,8 @@ chmod +x ./install-ripgrep.sh
 chmod +x ./install-starship.sh
 chmod +x ./install-zoxide.sh
 chmod +x ./install-uv.sh
+chmod +x ./install-sops.sh
+chmod +x ./install-age.sh
 
 
 # Must have
@@ -35,3 +37,5 @@ chmod +x ./install-uv.sh
 ./install-starship.sh
 ./install-zoxide.sh
 ./install-uv.sh
+./install-sops.sh
+./install-age.sh
