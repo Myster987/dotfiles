@@ -2,6 +2,8 @@
 
 # Give permissions
 chmod +x ./update-apt.sh
+chmod +x ./install-stow.sh
+chmod +x ./symlink-files.sh
 chmod +x ./install-zsh.sh
 chmod +x ./install-brew.sh
 chmod +x ./install-tmux.sh
@@ -18,6 +20,8 @@ chmod +x ./install-uv.sh
 
 # Must have
 ./update-apt.sh
+./install-stow.sh
+./symlink-files.sh
 ./install-zsh.sh
 ./install-brew.sh
 ./install-tmux.sh
