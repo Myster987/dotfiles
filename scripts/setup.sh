@@ -13,6 +13,7 @@ chmod +x ./install-fzf.sh
 chmod +x ./install-ripgrep.sh
 chmod +x ./install-starship.sh
 chmod +x ./install-zoxide.sh
+chmod +x ./install-uv.sh
 
 
 # Must have
@@ -29,3 +30,4 @@ chmod +x ./install-zoxide.sh
 ./install-ripgrep.sh
 ./install-starship.sh
 ./install-zoxide.sh
+./install-uv.sh

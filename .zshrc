@@ -1,3 +1,6 @@
+export TERM=xterm-256color
+export COLORTERM=truecolor
+
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 if [ ! -d "$ZINIT_HOME" ]; then
@@ -22,8 +25,6 @@ zinit snippet OMZP::sudo
 zinit snippet OMZP::command-not-found
 zinit snippet OMZP::brew
 zinit snippet OMZP::rust
-zinit snippet OMZP::kubectl
-zinit snippet OMZP::gh
 
 # Load completions
 autoload -Uz compinit && compinit
@@ -59,6 +60,9 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 alias ls='eza -la'
 alias f='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
+alias k='kubectl --kubeconfig="./kubeconfig.yaml"'
+alias grep='rg'
+alias cat='bat'
 
 # Shell integrations
 source <(fzf --zsh)
