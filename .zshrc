@@ -59,10 +59,12 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # Aliases
 
 alias ls='eza -la'
-alias f='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
+alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
+alias fzf-cd='cd "$(dirname "$(fzf)")"'
 alias k='kubectl --kubeconfig="./kubeconfig.yaml"'
 alias grep='rg'
 alias cat='bat'
+alias sops-age="export SOPS_AGE_KEY_FILE=./age.agekey && sops"
 
 # Shell integrations
 source <(fzf --zsh)

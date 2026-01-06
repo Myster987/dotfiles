@@ -18,6 +18,7 @@ chmod +x ./install-zoxide.sh
 chmod +x ./install-uv.sh
 chmod +x ./install-sops.sh
 chmod +x ./install-age.sh
+chmod +x ./install-k9s.sh
 
 
 # Must have
@@ -39,3 +40,4 @@ chmod +x ./install-age.sh
 ./install-uv.sh
 ./install-sops.sh
 ./install-age.sh
+./install-k9s.sh
