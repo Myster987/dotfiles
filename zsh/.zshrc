@@ -1,3 +1,10 @@
+# Just source the Omarchy bash aliases, or copy them over
+source ~/.local/share/omarchy/default/bash/aliases
+
+export PATH="$HOME/.local/bin:$PATH"
+
+export SUDO_EDITOR="$EDITOR"
+export BAT_THEME=ansi
 export TERM=xterm-256color
 export COLORTERM=truecolor
 
@@ -19,12 +26,12 @@ zinit light Aloxaf/fzf-tab
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 # Add in snippets
-zinit snippet OMZL::git.zsh
-zinit snippet OMZP::git
-zinit snippet OMZP::sudo
+# zinit snippet OMZL::git.zsh
+# zinit snippet OMZP::git
+# zinit snippet OMZP::sudo
 zinit snippet OMZP::command-not-found
-zinit snippet OMZP::brew
-zinit snippet OMZP::rust
+# zinit snippet OMZP::brew
+# zinit snippet OMZP::rust
 
 # Load completions
 autoload -Uz compinit && compinit
@@ -51,22 +58,26 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^x^e' edit-command-line
+
 # Path CLIs
 . "$HOME/.cargo/env"
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 # Aliases
 
-alias ls='eza -la'
-alias fzf='fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
-alias fzf-cd='cd "$(dirname "$(fzf)")"'
+#alias ls='eza -la'
 alias k='kubectl --kubeconfig="./kubeconfig.yaml"'
 alias grep='rg'
-alias cat='bat'
 alias sops-age="export SOPS_AGE_KEY_FILE=./age.agekey && sops"
+alias k9s-sops='sops-age exec-file ./kubeconfig.yaml "k9s --kubeconfig {}"'
 
 # Shell integrations
-source <(fzf --zsh)
-eval "$(zoxide init --cmd cd zsh)"
+
+if command -v zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init zsh)"
+fi
+
+eval "$(atuin init zsh)"
 eval "$(starship init zsh)"
