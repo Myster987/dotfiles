@@ -2,4 +2,4 @@
 
 echo "Installing bat"
 
-brew install bat
+sudo pacman -S --noconfirm bat

@@ -2,4 +2,4 @@
 
 echo "Installing SOPS"
 
-brew install sops
+sudo pacman -S --noconfirm sops

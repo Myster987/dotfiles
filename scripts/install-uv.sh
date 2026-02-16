@@ -2,4 +2,4 @@
 
 echo "Installing Python uv"
 
-brew install uv
+sudo pacman -S --noconfirm uv

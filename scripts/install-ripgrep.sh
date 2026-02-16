@@ -2,4 +2,4 @@
 
 echo "Installing ripgrep"
 
-brew install ripgrep
+sudo pacman -S --noconfirm ripgrep

@@ -2,4 +2,4 @@
 
 echo "Installing zoxide"
 
-brew install zoxide
+sudo pacman -S --noconfirm zoxide

@@ -2,4 +2,4 @@
 
 echo "Installing age - encryption"
 
-brew install age
+sudo pacman -S --noconfirm age

@@ -2,4 +2,4 @@
 
 echo "Installing starship"
 
-brew install starship
+sudo pacman -S --noconfirm starship

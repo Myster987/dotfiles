@@ -2,4 +2,4 @@
 
 echo "Installing fzf"
 
-brew install fzf
+sudo pacman -S --noconfirm fzf

@@ -2,4 +2,4 @@
 
 echo "Installing eza"
 
-brew install eza
+sudo pacman -S --noconfirm eza

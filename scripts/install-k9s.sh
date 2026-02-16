@@ -2,4 +2,4 @@
 
 echo "Installing k9s..."
 
-brew install k9s
+sudo pacman -S --noconfirm k9s

@@ -2,4 +2,4 @@
 
 echo "Installing Github CLI"
 
-brew install gh
+sudo pacman -S --noconfirm github-cli

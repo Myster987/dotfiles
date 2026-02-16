@@ -2,4 +2,4 @@
 
 echo "Installing tmux"
 
-sudo apt install tmux -y
+sudo pacman -S --noconfirm tmux

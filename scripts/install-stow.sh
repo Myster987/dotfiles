@@ -2,4 +2,4 @@
 
 echo "Installing GNU Stow"
 
-sudo apt install stow -y
+sudo pacman -S --noconfirm stow
