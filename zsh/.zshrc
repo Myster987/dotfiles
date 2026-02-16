@@ -72,6 +72,7 @@ alias k='kubectl --kubeconfig="./kubeconfig.yaml"'
 alias grep='rg'
 alias sops-age="export SOPS_AGE_KEY_FILE=./age.agekey && sops"
 alias k9s-sops='sops-age exec-file ./kubeconfig.yaml "k9s --kubeconfig {}"'
+alias zed='zeditor'
 
 # Shell integrations
 
